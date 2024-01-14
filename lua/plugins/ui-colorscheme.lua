@@ -3,7 +3,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     branch = "osaka",
     lazy = true,
-    priority = 1000,
+    priority = 1002,
     opts = function()
       return {
         transparent = true,
@@ -13,7 +13,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 1001,
     opts = {},
   },
   {

@@ -12,13 +12,23 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1001,
-    opts = {},
+    opts = function()
+      return {
+        transparent = true,
+      }
+    end,
   },
   {
     "catppuccin/nvim",
+    lazy = true,
     name = "catppuccin",
     priority = 1000,
+    opts = function()
+      return {
+        transparent = true,
+      }
+    end,
   },
 }

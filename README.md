@@ -14,3 +14,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ### ansible changes
 
 ### terraform changes
+
+### Reference dotfile repositories
+
+- [1](https://github.com/omerxx/dotfiles)

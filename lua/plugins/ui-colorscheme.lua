@@ -31,4 +31,8 @@ return {
       }
     end,
   },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1003, -- Ensure it loads first
+  },
 }

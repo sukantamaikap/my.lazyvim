@@ -10,7 +10,7 @@ vim.o.termguicolors = true
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "catppuccin-frappe" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "onelight" } },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
@@ -43,6 +43,16 @@ require("lazy").setup({
             x = 0.5,
             y = 0.5,
           },
+        })
+      end,
+    },
+    {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup({
+          -- Configuration here, or leave empty to use defaults
         })
       end,
     },

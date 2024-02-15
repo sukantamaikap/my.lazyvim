@@ -27,9 +27,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.dot" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "lazyvim.plugins.extras.util.project" },
-    "xiyaowong/nvim-transparent",
-    "folke/zen-mode.nvim",
-    "preservim/vim-pencil",
     {
       "numToStr/FTerm.nvim",
       config = function()
@@ -43,16 +40,6 @@ require("lazy").setup({
             x = 0.5,
             y = 0.5,
           },
-        })
-      end,
-    },
-    {
-      "kylechui/nvim-surround",
-      version = "*", -- Use for stability; omit to use `main` branch for the latest features
-      event = "VeryLazy",
-      config = function()
-        require("nvim-surround").setup({
-          -- Configuration here, or leave empty to use defaults
         })
       end,
     },

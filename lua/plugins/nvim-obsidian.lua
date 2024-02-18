@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "ov",
-        path = "/Users/sm/sandbox/ov",
+        path = "/Users/maikapsu/sandbox/ov",
       },
     },
 

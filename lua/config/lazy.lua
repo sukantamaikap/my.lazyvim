@@ -28,22 +28,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "lazyvim.plugins.extras.util.project" },
     {
-      "numToStr/FTerm.nvim",
-      config = function()
-        local map = vim.api.nvim_set_keymap
-        local opts = { noremap = true, silent = true }
-        require("FTerm").setup({
-          blend = 5,
-          dimensions = {
-            height = 0.90,
-            width = 0.90,
-            x = 0.5,
-            y = 0.5,
-          },
-        })
-      end,
-    },
-    {
       "theprimeagen/harpoon",
       branch = "harpoon2",
       dependencies = { "nvim-lua/plenary.nvim" },
@@ -105,11 +89,9 @@ require("lazy").setup({
     },
     { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
     "nvim-telescope/telescope-symbols.nvim",
-    "ThePrimeagen/harpoon",
     "folke/twilight.nvim",
     -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make", cond = vim.fn.executable("make") == 1 },
-    "navarasu/onedark.nvim", -- Theme inspired by Atom
     "nvim-lualine/lualine.nvim",
     {
       "nvim-treesitter/nvim-treesitter",

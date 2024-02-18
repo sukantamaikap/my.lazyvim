@@ -35,4 +35,8 @@ return {
     "olimorris/onedarkpro.nvim",
     priority = 1003, -- Ensure it loads first
   },
+  {
+    "navarasu/onedark.nvim", -- Theme inspired by Atom
+    priority = 1004,
+  },
 }

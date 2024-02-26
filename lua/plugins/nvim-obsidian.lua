@@ -33,6 +33,13 @@ return {
           notes_subdir = "2024",
         },
       },
+      {
+        name = "entp",
+        path = "/Users/sm/sandbox/entp",
+        overrides = {
+          notes_subdir = "ideas",
+        },
+      },
     },
     -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
     -- way then set 'mappings = {}'.

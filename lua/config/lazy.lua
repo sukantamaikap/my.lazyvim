@@ -80,6 +80,7 @@ require("lazy").setup({
         })
       end,
     }, -- import/override with your plugins
+    "hrsh7th/cmp-cmdline",
     { import = "plugins" },
   },
   defaults = {

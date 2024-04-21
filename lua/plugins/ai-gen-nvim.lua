@@ -27,15 +27,15 @@ return {
     replace = true,
   },
   Enhance_Grammar_Spelling = {
-    prompt = "Modify the following text to improve grammar and spelling, just output the final text without additional quotes around it:\n$text",
+    prompt = "You are an expert copywriter. Please modify the following text to improve grammar and spelling, just output the final text without additional quotes around it:\n$text",
     replace = true,
   },
   Enhance_Wording = {
-    prompt = "Modify the following text to use better wording, just output the final text without additional quotes around it:\n$text",
+    prompt = "You are an expert copywriter. Modify the following text to use better wording, just output the final text without additional quotes around it:\n$text",
     replace = true,
   },
   Make_Concise = {
-    prompt = "Modify the following text to make it as simple and concise as possible, just output the final text without additional quotes around it:\n$text",
+    prompt = "You are an expert copywriter. Modify the following text to make it as simple and concise as possible, just output the final text without additional quotes around it:\n$text",
     replace = true,
   },
   Make_List = {
@@ -56,6 +56,11 @@ return {
   },
   Change_Code = {
     prompt = "Regarding the following code, $input, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```",
+  },
+  DevOpsEngineer = {
+    prompt = "You are a seasoned DevOps engineer. Your job is to assist me with DevOps technologies like Ansible, Terraform, shell script, AWS, Google Cloud Platform, VMWare, Python and JavaScript. Regarding the following prompt, $input, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```",
   },

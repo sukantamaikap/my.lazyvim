@@ -1,19 +1,8 @@
 return {
   {
-    "craftzdog/solarized-osaka.nvim",
-    branch = "osaka",
-    lazy = true,
-    priority = 1002,
-    opts = function()
-      return {
-        transparent = true,
-      }
-    end,
-  },
-  {
     "folke/tokyonight.nvim",
     lazy = true,
-    priority = 1001,
+    priority = 1002,
     opts = function()
       return {
         transparent = true,
@@ -24,7 +13,7 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
-    priority = 1000,
+    priority = 1003,
     opts = function()
       return {
         transparent = true,
@@ -32,11 +21,31 @@ return {
     end,
   },
   {
+    "uloco/bluloco.nvim",
+    lazy = false,
+    priority = 1004,
+    dependencies = { "rktjmp/lush.nvim" },
+    config = function()
+      -- your optional config goes here, see below.
+    end,
+  },
+  {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    priority = 1005,
+    config = function()
+      require("bamboo").setup({
+        -- optional configuration here
+      })
+      require("bamboo").load()
+    end,
+  },
+  {
     "olimorris/onedarkpro.nvim",
-    priority = 1003, -- Ensure it loads first
+    priority = 1006, -- Ensure it loads first
   },
   {
     "navarasu/onedark.nvim", -- Theme inspired by Atom
-    priority = 1004,
+    priority = 1007,
   },
 }

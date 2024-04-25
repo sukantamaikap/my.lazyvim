@@ -22,7 +22,7 @@ return {
   },
   {
     "uloco/bluloco.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1004,
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
@@ -31,7 +31,7 @@ return {
   },
   {
     "ribru17/bamboo.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1005,
     config = function()
       require("bamboo").setup({
@@ -42,10 +42,10 @@ return {
   },
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1006, -- Ensure it loads first
+    priority = 1006,
   },
   {
-    "navarasu/onedark.nvim", -- Theme inspired by Atom
+    "navarasu/onedark.nvim",
     priority = 1007,
   },
 }

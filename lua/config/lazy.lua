@@ -81,6 +81,7 @@ require("lazy").setup({
       end,
     }, -- import/override with your plugins
     "hrsh7th/cmp-cmdline",
+    "christoomey/vim-tmux-navigator",
     { import = "plugins" },
   },
   defaults = {

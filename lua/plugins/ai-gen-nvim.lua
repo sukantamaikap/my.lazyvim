@@ -16,6 +16,6 @@ return {
     -- The executed command must return a JSON object with { response, context }
     -- (context property is optional).
     list_models = "<omitted lua function>", -- Retrieves a list of model names
-    debug = false, -- Prints errors and the command which is run.
+    debug = true, -- Prints errors and the command which is run.
   },
 }

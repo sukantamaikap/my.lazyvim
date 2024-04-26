@@ -33,3 +33,8 @@ brew install font-blex-mono-nerd-font
 ### Reference dotfile repositories
 
 - [1](https://github.com/omerxx/dotfiles)
+- [2](https://github.com/typecraft-dev/dotfiles)
+
+### Notes
+
+Works in unision with [tmux setup](https://github.com/sukantamaikap/my.tmux).

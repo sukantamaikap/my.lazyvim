@@ -11,12 +11,23 @@ return {
   },
   {
     "catppuccin/nvim",
-    lazy = true,
+    lazy = false,
     name = "catppuccin",
-    priority = 1003,
+    priority = 1001,
     opts = function()
       return {
         transparent = true,
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          nvimtree = true,
+          treesitter = true,
+          notify = false,
+          mini = {
+            enabled = true,
+            indentscope_color = "",
+          },
+        },
       }
     end,
   },
@@ -30,22 +41,13 @@ return {
     end,
   },
   {
-    "ribru17/bamboo.nvim",
-    lazy = true,
-    priority = 1005,
-    config = function()
-      require("bamboo").setup({
-        -- optional configuration here
-      })
-      require("bamboo").load()
-    end,
-  },
-  {
     "olimorris/onedarkpro.nvim",
     priority = 1006,
+    lazy = true,
   },
   {
     "navarasu/onedark.nvim",
     priority = 1007,
+    lazy = true,
   },
 }

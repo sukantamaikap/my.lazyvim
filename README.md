@@ -26,10 +26,6 @@ brew install font-blex-mono-nerd-font
 
 - install neovim npm package globally: `npm install -g neovim`
 
-### ansible changes
-
-### terraform changes
-
 ### Reference dotfile repositories
 
 - [1](https://github.com/omerxx/dotfiles)

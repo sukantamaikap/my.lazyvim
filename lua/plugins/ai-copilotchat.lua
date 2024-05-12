@@ -8,12 +8,23 @@ return {
       language = "English", -- Copilot answer language settings when using default prompts. Default language is English.
       -- proxy = "socks5://127.0.0.1:3000", -- Proxies requests via https or socks.
       -- temperature = 0.1,
+      prompts = {
+        Explain = "Explain how it works.",
+        Review = "Review the following code and provide concise suggestions.",
+        Tests = "Briefly explain how the selected code works, then generate unit tests.",
+        Refactor = "Refactor the code to improve clarity and readability.",
+      },
     },
     build = function()
       vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
     end,
     event = "VeryLazy",
+    dependencies = {
+      { "nvim-telescope/telescope.nvim" }, -- Use telescope for help actions
+      { "nvim-lua/plenary.nvim" },
+    },
     keys = {
+      { "<leader>ccc", ":CopilotChat ", desc = "CopilotChat - Prompt" },
       { "<leader>ccb", ":CopilotChatBuffer ", desc = "CopilotChat - Chat with current buffer" },
       { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
       { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },

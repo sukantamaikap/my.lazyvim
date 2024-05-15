@@ -56,8 +56,8 @@ return {
     end)
 
     vim.keymap.set("n", "<leader>ac", ":Gen Chat<CR>")
-    vim.keymap.set("n", "<leader>ae", ":Gen Explain_Code<CR>")
-    vim.keymap.set("n", "<leader>ar", ":Gen Review_Code<CR>")
+    vim.keymap.set({ "v", "n" }, "<leader>ae", ":Gen Explain_Code<CR>")
+    vim.keymap.set({ "v", "n" }, "<leader>ar", ":Gen Review_Code<CR>")
     vim.keymap.set("n", "<leader>aa", ":Gen Ask<CR>")
   end,
 }

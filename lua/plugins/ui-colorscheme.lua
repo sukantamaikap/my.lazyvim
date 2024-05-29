@@ -45,9 +45,4 @@ return {
     priority = 1006,
     lazy = true,
   },
-  {
-    "navarasu/onedark.nvim",
-    priority = 1007,
-    lazy = true,
-  },
 }

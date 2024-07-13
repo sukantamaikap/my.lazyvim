@@ -45,7 +45,7 @@ return {
         opts = { buffer = true },
       },
     },
-    vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>"),
+    vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { desc = "Insert Obsidian Template" }),
 
     -- see below for full list of options 👇
     templates = {

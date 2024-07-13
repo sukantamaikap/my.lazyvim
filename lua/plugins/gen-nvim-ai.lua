@@ -55,9 +55,14 @@ return {
       vim.cmd("'<,'>Gen Fix_Err")
     end)
 
-    vim.keymap.set("n", "<leader>ac", ":Gen Chat<CR>")
-    vim.keymap.set({ "v", "n" }, "<leader>ae", ":Gen Explain_Code<CR>")
-    vim.keymap.set({ "v", "n" }, "<leader>ar", ":Gen Review_Code<CR>")
-    vim.keymap.set("n", "<leader>aa", ":Gen Ask<CR>")
+    vim.keymap.set("n", "<leader>ac", ":Gen Chat<CR>", { desc = "Chat with user prompt only" })
+    vim.keymap.set(
+      { "v", "n" },
+      "<leader>ae",
+      ":Gen Explain_Code<CR>",
+      { desc = "Explain the visually selected code " }
+    )
+    vim.keymap.set({ "v", "n" }, "<leader>ar", ":Gen Review_Code<CR>", { desc = "Review the visually selected code" })
+    vim.keymap.set("n", "<leader>aa", ":Gen Ask<CR>", { desc = "Ask based on visually selected code" })
   end,
 }

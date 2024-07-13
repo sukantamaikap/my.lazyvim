@@ -45,6 +45,7 @@ return {
         opts = { buffer = true },
       },
     },
+    vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>"),
 
     -- see below for full list of options 👇
     templates = {

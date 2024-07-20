@@ -7,6 +7,7 @@ return {
       show_prompt = true, -- Shows the Prompt submitted to Ollama.
       show_model = true, -- Displays which model you are using at the beginning of your chat session.
       no_auto_close = false, -- Never closes the window automatically.
+      verylazy = true,
       init = function()
         pcall(io.popen, "$HOME/dev/ollama/ollama serve > /dev/null 2>&1 &")
       end,

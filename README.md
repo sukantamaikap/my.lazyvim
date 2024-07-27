@@ -31,6 +31,18 @@ brew install font-blex-mono-nerd-font
 - [1](https://github.com/omerxx/dotfiles)
 - [2](https://github.com/typecraft-dev/dotfiles)
 
+### Debugining
+
+#### golang
+
+```zsh
+brew install delve
+```
+
 ### Notes
 
 Works in unision with [tmux setup](https://github.com/sukantamaikap/my.tmux).
+
+```
+
+```

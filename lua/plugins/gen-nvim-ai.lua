@@ -2,7 +2,7 @@ return {
   "David-Kunz/gen.nvim",
   config = function()
     require("gen").setup({
-      model = "llama3:8b", -- The default model to use.
+      model = "llama3.1:8b-instruct-q5_K_S", -- The default model to use.
       display_mode = "split", -- The display mode. Can be "float" or "split".
       show_prompt = true, -- Shows the Prompt submitted to Ollama.
       show_model = true, -- Displays which model you are using at the beginning of your chat session.

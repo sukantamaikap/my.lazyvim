@@ -2,7 +2,7 @@ return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   ft = "markdown",
-  lazy = true,
+  -- lazy = true,
 
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -53,6 +53,8 @@ return {
       },
     },
     vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { desc = "Insert Obsidian Template" }),
+    vim.keymap.set("n", "<leader>on", ":ObsidianNewFromTemplate<CR>", { desc = "Create a New Note" }),
+    vim.keymap.set("n", "<leader>oi", ":ObsidianPasteImg<CR>", { desc = "Insert image from clipboard" }),
 
     -- see below for full list of options 👇
     templates = {

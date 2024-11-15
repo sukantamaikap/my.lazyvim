@@ -31,4 +31,8 @@ return {
       }
     end,
   },
+  {
+    "marko-cerovac/material.nvim",
+    lazy = true,
+  },
 }

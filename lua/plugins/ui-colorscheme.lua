@@ -31,18 +31,4 @@ return {
       }
     end,
   },
-  {
-    "uloco/bluloco.nvim",
-    lazy = true,
-    priority = 1004,
-    dependencies = { "rktjmp/lush.nvim" },
-    config = function()
-      -- your optional config goes here, see below.
-    end,
-  },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1006,
-    lazy = true,
-  },
 }

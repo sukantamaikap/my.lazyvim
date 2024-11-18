@@ -1,9 +1,23 @@
+---@meta
+
+---@class lspconfig.options
+---@field servers table<string, lspconfig.options.config>
+---@field setup table<string, fun(server:string, opts:lspconfig.options.config)>
+
+---@class lspconfig.options.config
+---@field cmd? string[]
+---@field filetypes? string[]
+---@field root_dir? function
+---@field single_file_support? boolean
+---@field settings? table
+
 return {
   -- tools
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
+        -- Existing tools
         "luacheck",
         "shellcheck",
         "shfmt",
@@ -18,6 +32,14 @@ return {
         "ansible-lint",
         "tflint",
         "cspell",
+        "pyright", -- Python LSP
+        "ruff-lsp", -- Python linter
+        "gopls", -- Go LSP
+        "golangci-lint", -- Go linter
+        "docker-compose-language-service",
+        "dockerfile-language-server",
+        "yaml-language-server",
+        "bash-language-server",
       })
     end,
   },
@@ -67,7 +89,6 @@ return {
         },
         html = {},
         lua_ls = {
-          -- enabled = false,
           single_file_support = true,
           settings = {
             Lua = {
@@ -79,9 +100,7 @@ return {
                 callSnippet = "Both",
               },
               misc = {
-                parameters = {
-                  -- "--log-level=trace",
-                },
+                parameters = {},
               },
               hint = {
                 enable = true,
@@ -99,7 +118,6 @@ return {
               },
               diagnostics = {
                 disable = { "incomplete-signature-doc", "trailing-space" },
-                -- enable = false,
                 groupSeverity = {
                   strong = "Warning",
                   strict = "Warning",
@@ -131,8 +149,84 @@ return {
             },
           },
         },
+
+        -- New server configurations
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
+              },
+            },
+          },
+        },
+        ruff_lsp = {}, -- Python linter
+
+        gopls = {
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              staticcheck = true,
+              gofumpt = true,
+              usePlaceholders = true,
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+            },
+          },
+        },
+
+        golangci_lint_ls = {}, -- Go linter
+
+        docker_compose_language_service = {},
+        dockerls = {},
+
+        yamlls = {
+          settings = {
+            yaml = {
+              schemas = {
+                ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "/*.k8s.yaml",
+                ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose*.yml",
+              },
+              validate = true,
+              format = {
+                enable = true,
+              },
+            },
+          },
+        },
+        bashls = {
+          filetypes = { "sh", "bash", "zsh" },
+          settings = {
+            bashIde = {
+              globPattern = "*@(.sh|.inc|.bash|.command)",
+              shellcheckPath = "", -- Leave empty to use shellcheck from PATH
+            },
+          },
+        },
       },
-      setup = {},
+      setup = {
+        -- Add any specific setup handlers here if needed
+        gopls = function()
+          -- Workaround for gopls not supporting semanticTokens
+          require("lspconfig").gopls.setup({
+            on_attach = function(client, bufnr)
+              client.server_capabilities.semanticTokensProvider = nil
+            end,
+          })
+        end,
+      },
     },
   },
   {

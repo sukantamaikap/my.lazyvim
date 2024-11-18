@@ -35,4 +35,8 @@ return {
     "marko-cerovac/material.nvim",
     lazy = true,
   },
+  {
+    "rose-pine/neovim",
+    lazy = true,
+  },
 }

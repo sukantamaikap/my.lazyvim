@@ -39,10 +39,12 @@ brew install font-blex-mono-nerd-font
 brew install delve
 ```
 
+#### python
+
+```zsh
+brew install ruff
+```
+
 ### Notes
 
 Works in unision with [tmux setup](https://github.com/sukantamaikap/my.tmux).
-
-```
-
-```

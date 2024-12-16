@@ -26,6 +26,15 @@ brew install font-blex-mono-nerd-font
 
 - install neovim npm package globally: `npm install -g neovim`
 
+### makrdownlint changes
+
+Following [this](https://github.com/LazyVim/LazyVim/discussions/4094) solution, to disable Markdown warning, `$HOME/.markdownlint-cli2.yaml` need to be present with the below content:
+
+```yaml
+config:
+  MD013: false
+```
+
 ### Reference dotfile repositories
 
 - [1](https://github.com/omerxx/dotfiles)
